@@ -18,7 +18,7 @@ WORKDIR /app
 
 ENV REPO=https://github.com/f01c5700/op-geth
 ENV VERSION=cv1.0.3
-ENV COMMIT=82f6043667efabeefffd6265560debf7c9781fac
+ENV COMMIT=9c2667bf4c3d5b4a00380b359eff47c148018e0c
 RUN git clone $REPO --branch $VERSION --single-branch . && \
     git switch -c branch-$VERSION && \
     bash -c '[ "$(git rev-parse HEAD)" = "$COMMIT" ]'
